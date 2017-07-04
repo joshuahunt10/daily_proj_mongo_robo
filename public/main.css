@@ -1,0 +1,42 @@
+
+body{
+}
+
+.hire-p{
+  color:red
+}
+.body-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+
+}
+.user-wrapper{
+  flex-basis:20%;
+  margin:1%;
+  border:1px solid grey;
+}
+
+.profile-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.left-wrapper{
+  text-align: right;
+  margin-right:1%;
+}
+
+.right-wrapper{
+  padding-top:3.6%;
+}
+
+.prof-pic{
+  border:1px solid grey;
+  border-radius: 50%;
+}
+
+.edu-p{
+  padding-bottom: 2.2%;
+}

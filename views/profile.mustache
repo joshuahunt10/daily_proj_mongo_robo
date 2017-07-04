@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <title></title>
+    <link rel="stylesheet" href="master.css">
+  </head>
+  <body>
+    {{#data}}
+    <div class="profile-wrapper">
+      <div class="left-wrapper">
+        <div class="profile-pic">
+          <img class= 'prof-pic' src="{{avatar}}" />
+        </div>
+        <h3>Education</h3>
+        <h3>Skills</h3>
+      </div>
+
+      <div class="right-wrapper">
+        <div class="name">
+          <h1>{{name}}</h1>
+        </div>
+        <div class="pers-info">
+          {{#address}}
+            {{#city}}
+              <span>{{city}},</span>
+            {{/city}}
+            {{^city}}
+
+            {{/city}}
+            <span>{{country}} |</span>
+          {{/address}}
+          <span>{{job}}</span>
+            {{#company}}
+            <span>,{{company}}</span><br>
+            {{/company}}
+            {{^company}}
+            <span class="hire-p">Available for hire!</span><br>
+            {{/company}}
+          <span>{{email}} | {{phone}}</span>
+        </div>
+        <div class="education">
+          <p class='edu-p'>{{university}}</p>
+        </div>
+        <div class="skills">
+          <p>
+            {{#skills}}
+            <p>
+              {{.}}
+            </p>
+            {{/skills}}
+          </p>
+        </div>
+      </div>
+  </div>
+  {{/data}}
+  </body>
+</html>
