@@ -5,11 +5,13 @@ var MongoClient = require('mongodb').MongoClient
   , assert = require('assert');
 
 var url = 'mongodb://localhost:27017/robots';
+const mongoURL = process.env.MONGODB_URI || url
+
 
 
 
 router.get('/', function (req, res) {
-  MongoClient.connect(url, function(err, db) {
+  MongoClient.connect(mongoURL, function(err, db) {
    if (err) {
      throw err;
    } else {
@@ -28,7 +30,7 @@ router.get('/', function (req, res) {
 
 router.get('/:id', function(req, res){
   var id = parseInt(req.params.id);
-  MongoClient.connect(url, function(err, db) {
+  MongoClient.connect(mongoURL, function(err, db) {
    if (err) {
      throw err;
    } else {
